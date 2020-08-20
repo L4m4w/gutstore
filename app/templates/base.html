@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Бичи в сети</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="/add_post">Добавление объявления</a>
+        <a class="p-2 text-dark" href="/main">Main</a>
+        <a class="p-2 text-dark" href="user">register</a>
+        <a class="p-2 text-dark" href="rg_users">Users</a>
+        <a class="p-2 text-dark" href="login">login</a>
+        <a class="p-2 text-dark" href="logout">logout</a>
+
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Личный кабинет</a>
+    </div>
+    {%block head %} {% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% block body %} {% endblock %}
+
+</body>
+</html>

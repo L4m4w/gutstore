@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!--<link rel="stylesheet" href="/static/style.css" type="text/css">-->
+<link rel="stylesheet" type="text/css" href="static/slider/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="static/slider/slick/slick-theme.css"/>
+
+{% endblock %}
+{% block title %}
+    НеГлавная
+{% endblock %}
+{%block body%}
+
+<div  id="content" >
+        <h3 class="name">{{ post.name }}</h3>
+        <div class="variable-width">
+                <div>
+                    <img class="photo_al" src="{{ url_for('static', filename ='img/'+post.image)  }}"  alt="" height="450" width="450">
+                </div>
+                <div>
+                    <img class="photo_al" src="{{ url_for('static', filename ='img/'+post.image2)  }}"  alt="" height="450" width="450">
+                </div>
+                <div>
+                    <img class="photo_al" src="{{ url_for('static', filename ='img/'+post.image3)  }}"  alt="" height="450" width="450">
+                </div>
+                <div>
+                    <img class="photo_al" src="{{ url_for('static', filename ='img/'+post.image4)  }}"  alt="" height="450" width="450">
+                </div>
+                <div>
+                    <img class="photo_al" src="{{ url_for('static', filename ='img/'+post.image5)  }}"  alt="" height="450" width="450">
+                </div>
+        </div>
+        <p class="description">{{ post.description }}</p>
+        <p class="author">{{ post.author.nick }}</p>
+        <p class="date">{{ post.pub_date.date() }}</p>
+
+
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="static/slider/slick/slick.min.js"></script>
+<script>
+$('.variable-width').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true
+});
+</script>
+{%endblock%}

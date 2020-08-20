@@ -1,0 +1,46 @@
+.post{
+    margin: 45 px 45px 70px 45px;
+    box-shadow:  0 0 5px rgba(250,50,50, .4);
+
+
+}
+.photo{
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin-left:30px;
+    padding-left: 30px;
+}
+.post_al{
+    padding: 45 px; 45px; 70px;
+    margin-left: 110px;
+    margin-top: 10px;
+
+}
+.photo_al{
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
+.input_2{
+    display: none;
+}
+.input_3{
+    display: none;
+}
+.input_4{
+    display: none;
+}
+.input_5{
+    display: none;
+}
+gggalleria{
+    width:800px;
+    height:400px;
+    margin:20px auto 0 auto;
+    background:#222;
+    background:-moz-radial-gradient(center 45deg, circle closest-side, #222 40%, #000 100%);
+    background:-webkit-gradient(
+    radial, center 50%, 20, center 50%, 250, from(#333), to(#000)
+     )
+}

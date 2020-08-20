@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add info
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2>Registration</h2>
+    <form method="post">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name"><br>
+        <input type="text" name="vk_id" id="vk_id" class="form-control" placeholder="Enter your vk id"><br>
+        <input type="text" name="mobile_number" id="mobile_number" class="form-control" placeholder="Enter your mobile_number"><br>
+        <select name="hostel" >
+                <option value="">Choose your hostel</option>
+                <option>Общежитие "Рыбацкое"</option>
+                <option>Общежитие "Лесное"</option>
+                <option>Общежитие "Дальневосточное"</option>
+                <option>Общежитие "Васильеостровское"</option>
+        </select>
+        <h1></h1>
+        <input type="submit" class="btn btn-success" value="Send">
+    </form>
+</div>
+{% endblock %}

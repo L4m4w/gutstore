@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="static/style.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="static/slider/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="static/slider/slick/slick-theme.css"/>
+
+
+
+<style type="text/css">
+    .galleria{ width: 700px; height: 400px; background: #000 }
+</style>
+{% endblock %}
+{% block title %}
+
+    Главная
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Posts:</h1>
+        <form class="navbar-form navbar-left" method="get">
+            <select name="ctg" >
+                <option value="">Choose category</option>
+                <option>Бытовая техника</option>
+                <option>Животные</option>
+                <option>Личные вещи</option>
+            </select>
+        <input type="submit" class="btn btn-default btn-xs" value="Upload">
+        </form>
+
+    <div  id="content" >
+        {% for pst in posts  %}
+        <div class="post">
+            <a href="post/{{pst.id}}"><h3 class="name">{{ pst.name }}</h3></a>
+
+            <div class="multiple-items">
+                <div>
+                    <img  src="{{ url_for('static', filename ='img/'+pst.image)  }}" class="photo" alt="" >
+                </div>
+                <div>
+                    <img  src="{{ url_for('static', filename ='img/'+pst.image2)  }}" class="photo" alt="" >
+                </div>
+                <div>
+                    <img  src="{{ url_for('static', filename ='img/'+pst.image3)  }}" class="photo" alt="" >
+                </div>
+                <div>
+                    <img  src="{{ url_for('static', filename ='img/'+pst.image4)  }}" class="photo" alt="" >
+                </div>
+                <div>
+                    <img  src="{{ url_for('static', filename ='img/'+pst.image5)  }}" class="photo" alt=""  >
+                </div>
+            </div>
+
+            <p class="description">{{ pst.description }}</p>
+            <p class="author">{{ pst.author.nick }}</p>
+            <p class="date">{{ pst.pub_date.date() }}</p>
+        </div>
+
+        {% endfor %}
+    </div>
+
+
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="static/slider/slick/slick.min.js"></script>
+<script >
+$('.multiple-items').slick({
+  slidesToShow: 3, //сколько слайдов показывать в карусели
+  slidesToScroll: 3 // сколько слайдов прокручивать за раз
+});
+</script>
+
+{% endblock %}

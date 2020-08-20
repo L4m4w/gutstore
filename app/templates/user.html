@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2>Registration</h2>
+    <form method="post">
+        <input type="text" name="nick" id="nick" class="form-control" placeholder="Enter your name"><br>
+
+
+        <h1></h1>
+        <textarea name="password" id="password" class="form-control" placeholder="Enter password"></textarea>
+
+        <h1></h1>
+        <input type="submit" class="btn btn-success" value="Send">
+    </form>
+</div>
+{% endblock %}

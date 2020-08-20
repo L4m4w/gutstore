@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Upload</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <form method="POST" action="/add_post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Enter name"><br>
+        <h1></h1>
+        <input type="text" name="description" placeholder="Description"><br>
+        <h1></h1>
+        <select name="category" >
+            <option value="">Choose category</option>
+            <option>Бытовая техника</option>
+            <option>Животные</option>
+            <option>Личные вещи</option>
+        </select>
+
+        <h1></h1>
+        <select name="hostel" >
+                <option value="">Choose your hostel</option>
+                <option>Общежитие "Рыбацкое"</option>
+                <option>Общежитие "Лесное"</option>
+                <option>Общежитие "Дальневосточное"</option>
+                <option>Общежитие "Васильеостровское"</option>
+        </select>
+        <h1></h1>
+        <input type="file" name="photo" placeholder="Upload file"  accept="image/*" onmousedown="viewInput()"><br>
+        <h1></h1>
+        <input id="input_2" class="input_2" type="file" name="photo2" placeholder="Upload file"  accept="image/*" onmousedown="viewInput2()"><br>
+        <input id="input_3" class="input_3" type="file" name="photo3" placeholder="Upload file"  accept="image/*" onmousedown="viewInput3()"><br>
+        <input id="input_4" class="input_4" type="file" name="photo4" placeholder="Upload file"  accept="image/*" onmousedown="viewInput4()"><br>
+        <input id="input_5" class="input_5" type="file" name="photo5" placeholder="Upload file"  accept="image/*"><br>
+        <input type="submit" class="btn btn-success" value="Upload">
+    </form>
+</div>
+</form>
+<script>
+    function viewInput(){
+    document.getElementById('input_2').style.display='block';
+    }
+    function viewInput2(){
+    document.getElementById('input_3').style.display='block';
+    }
+    function viewInput3(){
+    document.getElementById('input_4').style.display='block';
+    }
+    function viewInput4(){
+    document.getElementById('input_5').style.display='block';
+    }
+
+</script>
+</body>
+</html>
